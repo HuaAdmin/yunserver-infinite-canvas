@@ -1,9 +1,10 @@
-import { Bot, Menu } from "lucide-react";
+import { Bot, ExternalLink, Menu } from "lucide-react";
 import { Button, Tooltip } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { navigationTools, type NavigationToolSlug } from "@/constant/navigation-tools";
+import { CHANNEL_BASE_URL } from "@/constant/env";
 import { AppConfigModal } from "@/components/layout/app-config-modal";
 import { MobileNavDrawer } from "@/components/layout/mobile-nav-drawer";
 import { UserStatusActions } from "@/components/layout/user-status-actions";
@@ -39,13 +40,7 @@ export function AppTopNav() {
                     <div className="mx-auto flex h-full max-w-7xl items-stretch justify-between gap-5 px-6">
                         <div className="flex min-w-0 items-center">
                             <Link to="/" className="flex h-full shrink-0 items-center gap-2 text-sm font-semibold leading-none tracking-tight text-stone-950 transition hover:text-stone-600 dark:text-stone-100 dark:hover:text-stone-300">
-                                <span
-                                    className="size-5 shrink-0 bg-current"
-                                    style={{
-                                        mask: "url(/logo.svg) center / contain no-repeat",
-                                        WebkitMask: "url(/logo.svg) center / contain no-repeat",
-                                    }}
-                                />
+                                <img src="/logo.svg" alt="Yunserver" className="h-8 w-12 shrink-0 rounded-sm bg-white p-0.5 object-contain" />
                                 <span className="text-base font-medium">{t("meta.title")}</span>
                             </Link>
 
@@ -86,6 +81,10 @@ export function AppTopNav() {
                             <Tooltip title={t(panelOpen ? "topNav.closeAgent" : "topNav.openAgent")}>
                                 <Button type="text" shape="circle" className="!h-8 !w-8 !min-w-8" icon={<Bot className="size-4" />} onClick={togglePanel} aria-label={t(panelOpen ? "topNav.closeAgent" : "topNav.openAgent")} />
                             </Tooltip>
+                            <a href={CHANNEL_BASE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-8 shrink-0 items-center gap-1 px-1 text-sm text-stone-600 transition-colors hover:text-stone-950 dark:text-stone-300 dark:hover:text-white" aria-label="前往 api.yunserver.cn 获取 API 密钥" title="前往 api.yunserver.cn 获取 API 密钥">
+                                <ExternalLink className="size-4 sm:hidden" aria-hidden="true" />
+                                <span className="hidden sm:inline">API中转</span>
+                            </a>
                             <UserStatusActions />
                         </div>
                     </div>
