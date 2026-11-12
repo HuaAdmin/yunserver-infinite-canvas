@@ -7,9 +7,11 @@ description: Implemented changes that still need manual verification
 
 The current release needs manual verification in these areas:
 
+- Transparent branding: the header and documentation logo should preserve the blue artwork and wordmark without a white rectangle in either theme. Browser favicons and the Codex plugin icon should use the graphic mark without the small wordmark; resizing should preserve proportions.
+
 - GHCR image publishing: pushing to the default `main` branch should publish `ghcr.io/huaadmin/yunserver-infinite-canvas:latest` and a commit-SHA tag; pushing a `v*` tag should also publish the version tag. The multi-platform image should pull and run from the Compose example on Baota.
 
-- Fixed provider endpoint and API link: existing providers and imported config files should use `https://api.yunserver.cn` while retaining API keys, protocols, models, and request scripts; the add/edit provider UI should not show an endpoint field. Credential URL imports should accept only this fixed host. The “API中转” link beside the Agent button should open the host in a new tab with the requested accessible name, and the header and docs logos should show the vector SVG converted from the root `logo.png`.
+- Fixed provider endpoint and API link: existing providers and imported config files should use `https://api.yunserver.cn` while retaining API keys, protocols, models, and request scripts; the add/edit provider UI should not show an endpoint field. Credential URL imports should accept only this fixed host. The “API中转” link beside the Agent button should open the host in a new tab with the requested accessible name.
 
 - Saved model selection: save a canvas node with a model, then remove its provider or remove that model while another video model remains the default. Generation, retry and pending-video recovery should keep the unavailable model selected and open configuration instead of sending a request to the default or first provider. Re-selecting a valid model should allow generation. Changing only the API key on the same provider should preserve the model; switching a config node from a valid image model to video should still use the video default.
 

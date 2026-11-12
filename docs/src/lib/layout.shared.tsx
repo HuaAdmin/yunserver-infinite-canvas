@@ -51,7 +51,8 @@ export function baseOptions(locale: string): BaseLayoutProps {
     nav: {
       title: (
         <span className="inline-flex items-center gap-2 font-semibold">
-          <img src="/logo.svg" alt={appName} className="h-6 w-auto" />
+          <img src="/logo.svg" alt={appName} className="h-6 w-auto dark:hidden" />
+          <img src="/logo-dark.svg" alt={appName} className="hidden h-6 w-auto dark:block" />
           <span>{appName}</span>
         </span>
       ),

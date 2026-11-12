@@ -2,6 +2,7 @@
 
 ## Unreleased
 
++ [调整] 将 Yunserver Logo 转为透明矢量图，统一网站、文档站与插件图标并移除页头 Logo 白底。
 + [新增] GitHub Actions 会在 main 分支更新和版本标签推送时构建并发布 GHCR 镜像，Compose 部署改用 HuaAdmin 镜像地址。
 + [调整] 所有模型渠道统一使用固定的 API 中转地址并隐藏接口地址，同时新增顶部 API 中转入口并替换全局 Logo。
 

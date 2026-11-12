@@ -40,7 +40,8 @@ export function AppTopNav() {
                     <div className="mx-auto flex h-full max-w-7xl items-stretch justify-between gap-5 px-6">
                         <div className="flex min-w-0 items-center">
                             <Link to="/" className="flex h-full shrink-0 items-center gap-2 text-sm font-semibold leading-none tracking-tight text-stone-950 transition hover:text-stone-600 dark:text-stone-100 dark:hover:text-stone-300">
-                                <img src="/logo.svg" alt="Yunserver" className="h-8 w-12 shrink-0 rounded-sm bg-white p-0.5 object-contain" />
+                                <img src="/logo.svg" alt="Yunserver" className="h-8 w-12 shrink-0 object-contain dark:hidden" />
+                                <img src="/logo-dark.svg" alt="Yunserver" className="hidden h-8 w-12 shrink-0 object-contain dark:block" />
                                 <span className="text-base font-medium">{t("meta.title")}</span>
                             </Link>
 
