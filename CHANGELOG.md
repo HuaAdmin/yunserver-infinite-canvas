@@ -2,6 +2,7 @@
 
 ## Unreleased
 
++ [新增] GitHub Actions 会在 main 分支更新和版本标签推送时构建并发布 GHCR 镜像，Compose 部署改用 HuaAdmin 镜像地址。
 + [调整] 所有模型渠道统一使用固定的 API 中转地址并隐藏接口地址，同时新增顶部 API 中转入口并替换全局 Logo。
 
 ## v0.20.0 - 2026-10-10
